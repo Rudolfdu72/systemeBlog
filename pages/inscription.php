@@ -46,6 +46,7 @@ if(empty($passwordConfirm)){
 if(empty($error)){
   $password = password_hash($password, PASSWORD_BCRYPT);
 
+  // Vérification en amant de l'existance d'un utilisateur à travers son email avant inscription.
   $pdo = getPdo();
   $verif = $pdo->prepare('SELECT*FROM users WHERE email = :email');
   $verif->bindValue(':email',$_POST['email']);

@@ -11,7 +11,7 @@ function getPdo()
   }
 }
 
-
+// Vérification du role de l'utilisateur
 function isAdmin($user){
   if(!empty($user)) {
     $middlware = false;
@@ -25,6 +25,8 @@ function isAdmin($user){
   }
 }
 
+
+// Script de déconnexion
 function logout()
 {
   if (session_status() !== PHP_SESSION_ACTIVE) 
@@ -34,6 +36,8 @@ function logout()
     header('location:' . BASE_URL . '/auth/log.php');
 }
 
+
+// Redirection de l'utilisateur sur la page d'accueil si la session 'user' n'existe pas.
 function isLogin(){
   if(!isset($_SESSION['user'])){
     header("Location:". BASE_URL."/index.php");
@@ -41,6 +45,8 @@ function isLogin(){
   }
 }
 
+// Vérification du roel de l'utilisateur enregistré dans la session à l'aide d'une condition ternaire
 function isRedactor(){
  return isset($_SESSION['user']) && $_SESSION['user']['role'] == 'rédacteur' ?  true :  false; 
 }
+

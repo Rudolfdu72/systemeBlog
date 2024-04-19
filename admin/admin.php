@@ -10,12 +10,21 @@ $pdo = getPdo();
 $results = null;
 $stmt = null;
 
+// Récupération de toutes les colonnes de la table article et
+//  la colonne nom de la table user et jointure des deux et liaison et affichage
+//   de chaque article à selon son auteur(redacteur) l'auteur récupéré avec la session 'user'.
+
 if (isRedactor()) {
   $stmt = $pdo->prepare("SELECT articles.*, users.nom 
                       FROM articles 
                       INNER JOIN users ON articles.user = users.user_id
                       WHERE articles.user = " . $_SESSION['user']['user_id']);
 } else {
+
+//   Récupération de toutes les colonnes de la table article et
+// la colonne nom de la table user et jointure des deux ensuite
+//  affichage de tous les articles sur la pages admin
+
   $stmt = $pdo->prepare("SELECT articles.*, users.nom 
                       FROM articles 
                       INNER JOIN users ON articles.user = users.user_id");

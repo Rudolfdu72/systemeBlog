@@ -2,8 +2,9 @@
 include './path.php';
 include_once ('./components/header.php');
 include_once('./tools/functions.php');
-$pdo = getPdo();
 
+// Jointure de la table articles à la tables users
+$pdo = getPdo();
 $page = $_GET['page']?? 1;
 $start = 3 * ($page - 1);
 $stmt = $pdo->prepare('SELECT*FROM articles 
@@ -12,7 +13,7 @@ $stmt->bindValue(':start', $start, PDO::PARAM_INT);
 $stmt->execute();
 $result = $stmt->fetchAll();
 
-
+// pagination
 $statement = $pdo->prepare('SELECT COUNT(*) AS totalarticle FROM articles');
 $statement->execute();
 $totalarticle = $statement->fetch(PDO::FETCH_ASSOC); 

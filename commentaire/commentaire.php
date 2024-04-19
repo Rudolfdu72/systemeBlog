@@ -6,6 +6,8 @@ include_once('../tools/functions.php');
 
 
 $pdo = getPdo();
+
+// Liaison de chaque commentaire à un utilisateur et de chaque commentaire à un article
 $stmt = $pdo->prepare('SELECT * FROM commentaires
                        INNER JOIN users ON commentaires.user = users.user_id
                        INNER JOIN articles ON commentaires.article = articles.id_article
@@ -13,7 +15,6 @@ $stmt = $pdo->prepare('SELECT * FROM commentaires
                        );
 $stmt->execute();
 $results = $stmt->fetchAll();
-
 ?>
 <div class="board">
   <a href="<?= BASE_URL; ?>/admin/admin.php/" id="board"><button>Retour au tableau de bord</button></a>

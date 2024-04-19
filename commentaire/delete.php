@@ -3,9 +3,12 @@ include '../path.php';
 include ROOT_PATH . '/components/header.php';
 include_once ('../tools/functions.php');
 
+// Récupération de l'id passé dans l'URL avec la methode GET sur page de suppression
 if (isset($_GET["id"])) {
   $id = intval($_GET['id']);
   $pdo = getPdo();
+
+  // Selection du commentaires à supprimer en fonction de son id.
   $stmt = $pdo->prepare('DELETE FROM commentaires WHERE id_commentaire =?');
   $sup = $stmt->execute([$id]);
 }
