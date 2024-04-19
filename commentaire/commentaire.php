@@ -4,16 +4,7 @@ include '../path.php';
 include ROOT_PATH . '/components/header.php';
 include_once('../tools/functions.php');
 
-isLogin();
-$id ='';
-if(isset($_GET['id'])){
-  $id = intval($_GET['id']);
-if(empty($id)){
-  die('cet article n\'existe pas');
-}
 
-
-}
 $pdo = getPdo();
 $stmt = $pdo->prepare('SELECT * FROM commentaires
                        INNER JOIN users ON commentaires.user = users.user_id
@@ -49,11 +40,6 @@ $results = $stmt->fetchAll();
             <td><?= $resultat['pseudo']?></td>
             <td><?= $resultat['commentaire']?></td>
             <td><?= $resultat['created_at']?></td>
-            <td>
-              <a href="<?php echo BASE_URL; ?>/article/edit.php">
-                <button>Modifier</button>
-              </a>
-            </td>
             <td>
               <a href="<?php echo BASE_URL; ?>">
                 <button onclick="confirm('Voulez-vous executer cette action?')">Supprimer</button>

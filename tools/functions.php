@@ -44,14 +44,3 @@ function isLogin(){
 function isRedactor(){
  return isset($_SESSION['user']) && $_SESSION['user']['role'] == 'rédacteur' ?  true :  false; 
 }
-
-function destroyingSession()
-{
-  if(isset($_SESSION['user'])){
-    session_destroy();
-    header("Location:". BASE_URL."/auth/login.php");
-    exit();
-  }
-  
-}
-

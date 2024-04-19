@@ -47,6 +47,17 @@ if(empty($error)){
   $password = password_hash($password, PASSWORD_BCRYPT);
 
   $pdo = getPdo();
+  $verif = $pdo->prepare('SELECT*FROM users WHERE email = :email');
+  $verif->bindValue(':email',$_POST['email']);
+  $verif->execute();
+  $emailExiste = $verif->fetch();
+
+  if($emailExiste){
+    echo'cette adresse existe déjà';
+
+  } else{
+
+    $pdo = getPdo();
   $req="INSERT INTO users(nom, pseudo, email, password, role)VALUES(:nom, :pseudo, :email, :password, :role)";
   $stmt = $pdo->prepare($req);
   $stmt->bindValue(':nom', $nom);
@@ -55,6 +66,8 @@ if(empty($error)){
   $stmt->bindValue(':password', $password);
   $stmt->bindValue(':role', $role);
   $stmt->execute();
+  }
+  
 }
   }
 

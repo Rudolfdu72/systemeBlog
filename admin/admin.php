@@ -6,8 +6,6 @@ include_once ('../tools/functions.php');
 
 isLogin();
 
-
-
 $pdo = getPdo();
 $results = null;
 $stmt = null;
@@ -30,7 +28,6 @@ $results = $stmt->fetchAll();
   <div>
     <a href="<?= BASE_URL; ?>/article/create.php"><button class="article_button">Ajouter un article</button></a>
     <?php if (isAdmin($_SESSION['user'])): ?>
-      <a href="<?= BASE_URL; ?>/article/index.php"><button class="article_button">Gérer les articles</button></a>
       <a href="<?= BASE_URL; ?>/commentaire/commentaire.php"><button class="article_button">Gérer les
           commentaires</button></a>
     <?php endif; ?>
