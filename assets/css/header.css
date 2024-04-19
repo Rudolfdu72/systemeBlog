@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+html{
+  font-size: 65%;
+}
+
+.entete{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 10rem;
+  background-color:#F4B400;
+}
+
+.entete a{
+  font-size: 2rem;
+  padding-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.entete a:hover{
+ font-weight: bold;
+}
+
+.front{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+.front .navbar a{
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+header{
+  padding: 0 2%;
+  
+}
+
+.logo{
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F4B400; ;
+  font-style: italic;
+}
+
+#logocolor{
+  color: black;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background-color: #000000;
+  
+}
+
+.navbar a{
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 2rem;
+  color:white;
+}
+
+#search{
+
+  padding: 3px 0;
+  border: 1px solid rgba(72, 160, 233, 0.5);
+ outline: none; 
+}
+
+button{
+  padding: 3px;
+  border: 1px solid rgba(143, 146, 150, 0.5);
+}

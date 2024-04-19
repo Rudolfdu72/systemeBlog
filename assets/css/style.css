@@ -1,0 +1,317 @@
+
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 195px;
+}
+
+.container div{
+  width: 300px;
+  height:300px;
+}
+
+.title{
+  text-align: center;
+  padding: 5rem 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.small-title{
+  color: black;
+}
+
+.admin_container{
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.admin_container a{
+  padding-left: 15px;
+}
+
+#deconnexion{
+  margin-right: 20px;
+}
+
+.article_button{
+  background-color: #F4B400;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+.board #board button{
+  background-color: #F4B400;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.board{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.article_container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.article_container form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5rem;
+  width: 70%;
+}
+
+.article_container label{
+  display: flex;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.article_container input{
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+}
+
+.article_container textarea{
+  width: 100%;
+  outline: none;
+}
+
+.article_container input[type="date"]{
+  width: 30%;
+  padding: 10px 0;
+}
+
+.article_container input[type="submit"]{
+  width: 30%;
+  padding: 10px 0;
+  background-color:  #F4B400;
+  color: white;
+  border: none;
+}
+
+.apropos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  flex-direction: column;
+  padding: 5rem 22rem;
+  height: 500px;
+}
+
+.apropos h1{
+  padding-bottom: 3rem;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 5rem 10rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact h1{
+  font-size: 3rem;
+}
+
+.contact form{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.contact form input{
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  outline: none;
+
+}
+
+.contact form label{
+  font-size: 2rem;
+
+}
+
+.contact form input[type="submit"]{
+  background-color: #F4B400;
+  color: white;
+  border: none;
+  font-size: 2rem;
+}
+
+.contact p{
+  font-size: 2rem;
+}
+
+.contact a{
+  font-size: 2rem;
+  color: red;
+  
+}
+
+#role{
+  padding: 10px 0;
+  margin: 10px 0;
+  outline: none;
+}
+
+.img_resize{
+  width: 800px;
+  height: 400px;
+}
+
+#article_title{
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.article_template{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem 25%;
+  font-size: 1.5rem;
+  height: auto;
+}
+
+.article_template div p{
+  padding-top: 1rem;
+}
+
+.commentaire{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.commentaire .form_flex{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 57%;
+}
+
+.commentaire .form_flex label{
+  display: flex;
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
+
+.commentaire .form_flex input{
+  width: 50%;
+  padding: 10px 0;
+}
+
+.commentaire .form_flex textarea{
+  width: 100%;
+ 
+}
+
+.commentaire .form_flex input[type="submit"]{
+ 
+  padding: 10px 0;
+  background-color: #F4B400;
+  color: white;
+  margin-top: 10px;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.article_template h1{
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.accueil{
+  width: 300px;
+  height: 300px;
+}
+
+.coment{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem 10%;
+}
+
+.coment h1{
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+table{
+  text-align: center;
+}
+
+div .com{
+  padding-top: 5rem;
+}
+
+.table_container h1{
+  padding-bottom: 5rem;
+}
+
+.table_container{
+ width: 100%;
+}
+
+table {
+  width: 80%;
+}
+
+.image{
+width: 800px;
+height: 400px;
+}
+
+.comments{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 21.5%;
+}
+
+.comments div p{
+  font-size: 1.5rem;
+  padding: 5px 0;
+}
